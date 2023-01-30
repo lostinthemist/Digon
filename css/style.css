@@ -144,15 +144,15 @@ span {
 }
 
 .sc-hero-bg1 {
-    background-image: url('../img/slideshow-1.JPG');
+    background-image: url('../img/slideshow-item1.jpg');
 }
 
 .sc-hero-bg2 {
-    background-image: url('../img/slideshow-2.JPG');
+    background-image: url('../img/slideshow-item2.jpg');
 }
 
 .sc-hero-bg3 {
-    background-image: url('../img/slideshow-3.JPG');
+    background-image: url('../img/slideshow-item3.jpg');
 }
 
 .overlay-dark {
