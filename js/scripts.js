@@ -4,19 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (window.scrollY > 40) {
             document.getElementById('navbar_top').classList.add('fixed-top');
             document.getElementById('navbar_top').classList.remove('navbar-absolute');
-            // add padding top to show content behind navbar
-            //   navbar_height = document.querySelector('.navbar').offsetHeight;
-            //   document.body.style.paddingTop = navbar_height + 'px';
         } else {
             document.getElementById('navbar_top').classList.remove('fixed-top');
             document.getElementById('navbar_top').classList.add('navbar-absolute');
-            // remove padding top from body
-            //   document.body.style.paddingTop = '0';
         }
     });
 });
 
-// owl carousel init
+// owl carousel init & intersection observable API
 $(document).ready(function () {
     $(".navbar-toggler").click(function () {
         $(".navbar").toggleClass("navbar-open", 0);
@@ -83,27 +78,4 @@ $(document).ready(function () {
         sectionObserver.observe(section);
         section.classList.add('section-hidden');
     });
-
-    // item1
-
-    // const item1 = document.querySelector('.sc-service-animate1');
-
-    // const revealitem1 = function (entries, observer) {
-    //     const [entry] = entries;
-    //     console.log(entries);
-
-    //     if (!entry.isIntersecting) return;
-    //     entry.target.classList.add('animate-fade-left');
-    //     entry.target.classList.remove('section-hidden');
-    //     observer.unobserve(entry.target);
-    // };
-
-    // const itemObserver = new IntersectionObserver(revealitem1, {
-    //     root: null,
-    //     threshold: 0.25
-    // });
-    // item1.bind(function (item) {
-    //     itemObserver.observe(item);
-    //     item.classList.add('section-hidden');
-    // });
 });
